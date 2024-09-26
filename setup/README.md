@@ -7,6 +7,23 @@ This document provides instructions for setting the environment up locally.
 
 ## 1. Download and install Miniforge
 
+```
+# check Arch
+uname -m
+
+# Setup Ubuntu
+sudo apt update --yes
+sudo apt upgrade --yes
+
+# Get Miniforge and make it the main Python interpreter
+wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh -O ~/miniforge.sh
+bash ~/miniforge.sh -b -p ~/miniforge
+rm ~/miniforge.sh
+
+echo "PATH=$PATH:$HOME/miniforge/bin" >> .bashrc
+source .bashrc
+```
+
 Download miniforge from the GitHub repository [here](https://github.com/conda-forge/miniforge).
 
 <img src="https://sebastianraschka.com/images/LLMs-from-scratch-images/setup/01_optional-python-setup-preferences/download.png" alt="download" width="600px">
